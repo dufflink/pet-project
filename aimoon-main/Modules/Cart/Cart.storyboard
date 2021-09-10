@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rj2-oj-AnR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cart View Controller-->
+        <scene sceneID="iuw-cg-4br">
+            <objects>
+                <viewController storyboardIdentifier="CartViewController" id="W0q-SA-dh3" customClass="CartViewController" customModule="aimoon_main" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ckw-us-QvR" userLabel="Root View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ixn-7b-og0" userLabel="Bottom View">
+                                <rect key="frame" x="0.0" y="766.5" width="414" height="129.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0th-pg-V28" userLabel="Checkout Button" customClass="AMButton" customModule="aimoon_main" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="43.5" width="390" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="6Jr-h3-5Xz"/>
+                                        </constraints>
+                                        <state key="normal" title="Оформить заказ"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRegular" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="checkoutButtonDidPress:" destination="W0q-SA-dh3" eventType="touchUpInside" id="F7p-8X-uT6"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTD-DB-G7q" userLabel="Total Amount Label">
+                                        <rect key="frame" x="12" y="12" width="390" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="0th-pg-V28" firstAttribute="top" secondItem="HTD-DB-G7q" secondAttribute="bottom" constant="12" id="D0d-Ye-1Bl"/>
+                                    <constraint firstItem="HTD-DB-G7q" firstAttribute="leading" secondItem="ixn-7b-og0" secondAttribute="leading" constant="12" id="GKc-Mv-b1o"/>
+                                    <constraint firstAttribute="trailing" secondItem="HTD-DB-G7q" secondAttribute="trailing" constant="12" id="XhD-JJ-mK7"/>
+                                    <constraint firstItem="HTD-DB-G7q" firstAttribute="top" secondItem="ixn-7b-og0" secondAttribute="top" constant="12" id="afs-JO-vz3"/>
+                                    <constraint firstAttribute="trailing" secondItem="0th-pg-V28" secondAttribute="trailing" constant="12" id="gDa-O7-m30"/>
+                                    <constraint firstItem="0th-pg-V28" firstAttribute="leading" secondItem="ixn-7b-og0" secondAttribute="leading" constant="12" id="tBT-Ye-lKc"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wJK-3e-Tb6">
+                                <rect key="frame" x="0.0" y="88" width="414" height="678.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="W0q-SA-dh3" id="Zsc-Ox-2x5"/>
+                                    <outlet property="delegate" destination="W0q-SA-dh3" id="DY2-XT-t5c"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MyA-qc-JhD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ixn-7b-og0" firstAttribute="top" secondItem="wJK-3e-Tb6" secondAttribute="bottom" id="1vq-Yv-9gK"/>
+                            <constraint firstItem="ixn-7b-og0" firstAttribute="leading" secondItem="MyA-qc-JhD" secondAttribute="leading" id="7ti-Yl-Thx"/>
+                            <constraint firstAttribute="bottom" secondItem="ixn-7b-og0" secondAttribute="bottom" id="A6x-DS-cMW"/>
+                            <constraint firstItem="ixn-7b-og0" firstAttribute="trailing" secondItem="MyA-qc-JhD" secondAttribute="trailing" id="AvR-hg-UMV"/>
+                            <constraint firstItem="wJK-3e-Tb6" firstAttribute="top" secondItem="MyA-qc-JhD" secondAttribute="top" id="BIB-jK-T5h"/>
+                            <constraint firstItem="wJK-3e-Tb6" firstAttribute="leading" secondItem="MyA-qc-JhD" secondAttribute="leading" id="RKv-HZ-MCG"/>
+                            <constraint firstItem="wJK-3e-Tb6" firstAttribute="trailing" secondItem="MyA-qc-JhD" secondAttribute="trailing" id="fXE-3v-pm0"/>
+                            <constraint firstItem="MyA-qc-JhD" firstAttribute="bottom" secondItem="0th-pg-V28" secondAttribute="bottom" constant="8" id="gip-YV-ABm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qle-hL-H5w"/>
+                    <connections>
+                        <outlet property="bottomView" destination="ixn-7b-og0" id="D7h-m5-cxt"/>
+                        <outlet property="checkoutButton" destination="0th-pg-V28" id="iqi-Jv-iqH"/>
+                        <outlet property="tableView" destination="wJK-3e-Tb6" id="Th7-nK-8OU"/>
+                        <outlet property="totalAmountLabel" destination="HTD-DB-G7q" id="uLF-R5-EaJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gau-is-2aA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-71.014492753623188" y="107.8125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iU4-QN-Tm6">
+            <objects>
+                <navigationController storyboardIdentifier="CartNavigationController" id="rj2-oj-AnR" customClass="AMNavigationController" customModule="aimoon_main" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="elz-lT-1Vg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="W0q-SA-dh3" kind="relationship" relationship="rootViewController" id="bKz-dh-BaL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vGs-us-lP1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-799" y="108"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="0th-pg-V28">
+            <size key="intrinsicContentSize" width="127" height="28"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

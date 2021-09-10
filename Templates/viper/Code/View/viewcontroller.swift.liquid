@@ -1,0 +1,25 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+
+import UIKit
+
+final class {{ module_info.name }}ViewController: AMViewController {
+
+    var presenter: {{ module_info.name }}PresenterProtocol?
+
+    // MARK: - Life Cycle
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter?.viewDidLoad()
+    }
+
+}
+
+// MARK: - {{module_info.name}} View Protocol
+
+extension {{ module_info.name }}ViewController: {{module_info.name}}ViewProtocol {
+
+}

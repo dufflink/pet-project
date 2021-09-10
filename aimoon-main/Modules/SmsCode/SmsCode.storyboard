@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sms Code View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SmsCodeViewController" id="Y6W-OH-hqX" customClass="SmsCodeViewController" customModule="aimoon_main" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc" userLabel="Root View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAf-tO-kcd" userLabel="Center View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="752"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мы отправили код" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojh-3i-uIz" userLabel="Hint View">
+                                        <rect key="frame" x="48" y="8" width="318" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" name="Title Color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Ojh-3i-uIz" firstAttribute="top" secondItem="zAf-tO-kcd" secondAttribute="top" constant="8" placeholder="YES" id="09c-qV-PBN"/>
+                                    <constraint firstItem="Ojh-3i-uIz" firstAttribute="trailing" secondItem="zAf-tO-kcd" secondAttribute="trailing" constant="-48" id="FgZ-D9-6sM"/>
+                                    <constraint firstItem="Ojh-3i-uIz" firstAttribute="leading" secondItem="zAf-tO-kcd" secondAttribute="leading" constant="48" id="NxZ-7e-Bdg"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NsF-tI-aBT" customClass="AMButton" customModule="aimoon_main" customModuleProvider="target">
+                                <rect key="frame" x="16" y="804" width="382" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LIg-A4-j5k"/>
+                                </constraints>
+                                <state key="normal" title="Отправить повторно"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zAf-tO-kcd" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="6G4-yQ-sSc"/>
+                            <constraint firstItem="NsF-tI-aBT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="TCc-2q-YCO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NsF-tI-aBT" secondAttribute="trailing" constant="16" id="TQe-sE-NXX"/>
+                            <constraint firstItem="NsF-tI-aBT" firstAttribute="top" secondItem="zAf-tO-kcd" secondAttribute="bottom" constant="8" id="cqB-1O-zVj"/>
+                            <constraint firstItem="zAf-tO-kcd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="gKI-NR-y66"/>
+                            <constraint firstItem="NsF-tI-aBT" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="-8" id="hlg-4C-VMm"/>
+                            <constraint firstItem="zAf-tO-kcd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="piz-Ng-ucJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="centerView" destination="zAf-tO-kcd" id="Zks-o1-WmH"/>
+                        <outlet property="hintView" destination="Ojh-3i-uIz" id="NmE-3a-g7I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="NsF-tI-aBT">
+            <size key="intrinsicContentSize" width="148" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="Title Color">
+            <color red="0.15294117647058825" green="0.15686274509803921" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

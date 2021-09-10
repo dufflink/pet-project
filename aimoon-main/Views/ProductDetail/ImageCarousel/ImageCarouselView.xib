@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageCarouselView" customModule="aimoon_main" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="A0E-wd-dj8" id="HWC-Vb-73M"/>
+                <outlet property="counterView" destination="BCs-Fs-tYe" id="oZ0-5z-rOK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="I8L-Ov-UdY" userLabel="Image Carousel View">
+            <rect key="frame" x="0.0" y="0.0" width="288" height="170"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="A0E-wd-dj8" customClass="ImageCarouselCollectionView" customModule="aimoon_main" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="288" height="170"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="1zP-Sv-ltx">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Un-Or-hIk" userLabel="Dark View">
+                    <rect key="frame" x="0.0" y="0.0" width="288" height="170"/>
+                    <color key="backgroundColor" red="0.1122872489" green="0.1122872489" blue="0.1122872489" alpha="0.10257273706896551" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BCs-Fs-tYe" customClass="CounterView" customModule="aimoon_main" customModuleProvider="target">
+                    <rect key="frame" x="12" y="134" width="40" height="24"/>
+                    <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="2PX-AQ-X3R"/>
+                        <constraint firstAttribute="width" constant="40" id="QV1-jr-uaa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="GmD-xL-yVJ"/>
+            <color key="backgroundColor" name="Placeholder"/>
+            <constraints>
+                <constraint firstItem="A0E-wd-dj8" firstAttribute="leading" secondItem="GmD-xL-yVJ" secondAttribute="leading" id="2ON-dl-gif"/>
+                <constraint firstItem="0Un-Or-hIk" firstAttribute="trailing" secondItem="GmD-xL-yVJ" secondAttribute="trailing" id="37E-j5-kmP"/>
+                <constraint firstItem="0Un-Or-hIk" firstAttribute="bottom" secondItem="GmD-xL-yVJ" secondAttribute="bottom" id="7jG-vM-dfp"/>
+                <constraint firstItem="0Un-Or-hIk" firstAttribute="top" secondItem="I8L-Ov-UdY" secondAttribute="top" id="8vk-HE-9RN"/>
+                <constraint firstItem="BCs-Fs-tYe" firstAttribute="leading" secondItem="I8L-Ov-UdY" secondAttribute="leading" constant="12" id="BZb-hK-qzq"/>
+                <constraint firstItem="A0E-wd-dj8" firstAttribute="trailing" secondItem="GmD-xL-yVJ" secondAttribute="trailing" id="HPQ-Cq-06d"/>
+                <constraint firstItem="A0E-wd-dj8" firstAttribute="top" secondItem="I8L-Ov-UdY" secondAttribute="top" id="Hfs-UI-Kbg"/>
+                <constraint firstAttribute="bottom" secondItem="A0E-wd-dj8" secondAttribute="bottom" id="QMa-4F-FRD"/>
+                <constraint firstAttribute="bottom" secondItem="BCs-Fs-tYe" secondAttribute="bottom" constant="12" id="Whr-CI-Df3"/>
+                <constraint firstItem="0Un-Or-hIk" firstAttribute="leading" secondItem="GmD-xL-yVJ" secondAttribute="leading" id="efP-ke-cwt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-457.97101449275368" y="-166.74107142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Placeholder">
+            <color red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Occ-n4-DWr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Product Detail View Controller-->
+        <scene sceneID="BLJ-1M-0dJ">
+            <objects>
+                <viewController storyboardIdentifier="ProductDetailViewController" hidesBottomBarWhenPushed="YES" id="Occ-n4-DWr" customClass="ProductDetailViewController" customModule="aimoon_main" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Nq-ew-Cbi" userLabel="Root View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="alV-zb-Cp3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h3J-sl-ker" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55 000 Р" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bN6-Qj-w7w" userLabel="Price View">
+                                                <rect key="frame" x="12" y="12" width="390" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <color key="textColor" name="Title Color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New super book from England for your happy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWx-yS-EBB" userLabel="Title View">
+                                                <rect key="frame" x="12" y="41" width="390" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="jWx-yS-EBB" firstAttribute="top" secondItem="bN6-Qj-w7w" secondAttribute="bottom" constant="8" id="63y-Nh-s0j"/>
+                                            <constraint firstAttribute="trailing" secondItem="bN6-Qj-w7w" secondAttribute="trailing" constant="12" id="DEu-nG-kla"/>
+                                            <constraint firstItem="bN6-Qj-w7w" firstAttribute="leading" secondItem="h3J-sl-ker" secondAttribute="leading" constant="12" id="SIe-fw-O7c"/>
+                                            <constraint firstItem="jWx-yS-EBB" firstAttribute="leading" secondItem="h3J-sl-ker" secondAttribute="leading" constant="12" id="TfA-0b-Zqi"/>
+                                            <constraint firstAttribute="trailing" secondItem="jWx-yS-EBB" secondAttribute="trailing" constant="12" id="jMq-s5-88z"/>
+                                            <constraint firstItem="bN6-Qj-w7w" firstAttribute="top" secondItem="h3J-sl-ker" secondAttribute="top" constant="12" id="jaz-B8-gYB"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="h3J-sl-ker" firstAttribute="height" secondItem="Z2L-zC-3j0" secondAttribute="height" id="0mZ-vv-ZeI"/>
+                                    <constraint firstAttribute="bottom" secondItem="h3J-sl-ker" secondAttribute="bottom" id="IHY-gf-hhI"/>
+                                    <constraint firstAttribute="trailing" secondItem="h3J-sl-ker" secondAttribute="trailing" id="OHo-m2-0mq"/>
+                                    <constraint firstItem="h3J-sl-ker" firstAttribute="width" secondItem="Z2L-zC-3j0" secondAttribute="width" id="ZDw-Fs-5ah"/>
+                                    <constraint firstItem="h3J-sl-ker" firstAttribute="leading" secondItem="alV-zb-Cp3" secondAttribute="leading" id="sai-gg-CPQ"/>
+                                    <constraint firstItem="h3J-sl-ker" firstAttribute="top" secondItem="alV-zb-Cp3" secondAttribute="top" id="vS5-b6-uFN"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Erq-gL-mgR"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Z2L-zC-3j0"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6t-pt-sgp" userLabel="Add To Cart Button" customClass="AMButton" customModule="aimoon_main" customModuleProvider="target">
+                                <rect key="frame" x="16" y="818" width="382" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="vFJ-Y6-lxY"/>
+                                </constraints>
+                                <state key="normal" title="Добавить в корзину"/>
+                                <connections>
+                                    <action selector="addToCartButtonDidPress:" destination="Occ-n4-DWr" eventType="touchUpInside" id="Btv-Oy-C3E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FQI-w5-BqJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FQI-w5-BqJ" firstAttribute="bottom" secondItem="alV-zb-Cp3" secondAttribute="bottom" id="N9X-fe-Kim"/>
+                            <constraint firstItem="FQI-w5-BqJ" firstAttribute="bottom" secondItem="z6t-pt-sgp" secondAttribute="bottom" constant="4" id="Thd-pU-jYF"/>
+                            <constraint firstItem="alV-zb-Cp3" firstAttribute="trailing" secondItem="FQI-w5-BqJ" secondAttribute="trailing" id="cGo-2C-a1c"/>
+                            <constraint firstItem="FQI-w5-BqJ" firstAttribute="trailing" secondItem="z6t-pt-sgp" secondAttribute="trailing" constant="16" id="m8i-mR-4T1"/>
+                            <constraint firstItem="z6t-pt-sgp" firstAttribute="leading" secondItem="FQI-w5-BqJ" secondAttribute="leading" constant="16" id="o42-pV-0zg"/>
+                            <constraint firstItem="alV-zb-Cp3" firstAttribute="leading" secondItem="FQI-w5-BqJ" secondAttribute="leading" id="w0P-Vc-WUD"/>
+                            <constraint firstItem="alV-zb-Cp3" firstAttribute="top" secondItem="7Nq-ew-Cbi" secondAttribute="top" id="wak-Ct-fzr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addToCartButton" destination="z6t-pt-sgp" id="JoZ-ML-FOn"/>
+                        <outlet property="contentView" destination="h3J-sl-ker" id="9td-Ua-wUV"/>
+                        <outlet property="priceView" destination="bN6-Qj-w7w" id="MXW-oN-btV"/>
+                        <outlet property="priceViewTopConstraint" destination="jaz-B8-gYB" id="VX0-3F-8Lk"/>
+                        <outlet property="scrollView" destination="alV-zb-Cp3" id="lej-sY-gYe"/>
+                        <outlet property="titleView" destination="jWx-yS-EBB" id="3N2-IC-xd1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YDO-NT-dc3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="132.58928571428572"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="z6t-pt-sgp">
+            <size key="intrinsicContentSize" width="143" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="Title Color">
+            <color red="0.15294117647058825" green="0.15686274509803921" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

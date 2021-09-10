@@ -1,0 +1,25 @@
+# Template information section
+name: viper
+summary: Autogen of VIPER module
+author: Maxim Skorynin
+version: 1.0.0
+license: MIT
+
+# The declarations for code files
+
+code_files:
+
+# Protocols
+- {name: Protocols.swift, path: Code/Protocols/protocols.swift.liquid}
+
+# View
+- {name: ViewController.swift, path: Code/View/viewcontroller.swift.liquid}
+
+# Presenter
+- {name: Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
+
+# Interactor
+- {name: Interactor.swift, path: Code/Interactor/interactor.swift.liquid}
+
+# Router
+- {name: Router.swift, path: Code/Router/router.swift.liquid}

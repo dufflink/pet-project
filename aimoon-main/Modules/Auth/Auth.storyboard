@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LO1-h9-nGh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ptx-BR-6Jc">
+            <objects>
+                <navigationController storyboardIdentifier="AuthNavigationController" id="LO1-h9-nGh" customClass="AMNavigationController" customModule="aimoon_main" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gdf-Sn-Aso">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Njg-qc-iGq" kind="relationship" relationship="rootViewController" id="hag-do-WZi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L6A-6W-vlC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-842" y="108"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="4hE-j2-l2O">
+            <objects>
+                <viewController storyboardIdentifier="AuthViewController" id="Njg-qc-iGq" customClass="AuthViewController" customModule="aimoon_main" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PKz-LD-0Qy" userLabel="Root View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkl-5x-zsp" userLabel="Sign In Button" customClass="AMButton" customModule="aimoon_main" customModuleProvider="target">
+                                <rect key="frame" x="54" y="810" width="306" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ES4-8E-4iH"/>
+                                </constraints>
+                                <state key="normal" title="Войти"/>
+                                <connections>
+                                    <action selector="signInButtonDidPress:" destination="Njg-qc-iGq" eventType="touchUpInside" id="00b-Kb-0Fd"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6G-eO-Orz">
+                                <rect key="frame" x="16" y="104" width="382" height="690"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qCE-dk-5ea" userLabel="Phone Text Field" customClass="AMPhoneNumberTextField" customModule="aimoon_main" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="328" width="350" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Укажите ваш номер телефона" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLx-za-nQ8" userLabel="Hint Label">
+                                        <rect key="frame" x="16" y="303" width="350" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" name="Title Color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="dLx-za-nQ8" firstAttribute="leading" secondItem="t6G-eO-Orz" secondAttribute="leading" constant="16" id="6RJ-zP-OEG"/>
+                                    <constraint firstItem="qCE-dk-5ea" firstAttribute="centerY" secondItem="t6G-eO-Orz" secondAttribute="centerY" id="NoX-Al-MXA"/>
+                                    <constraint firstAttribute="trailing" secondItem="qCE-dk-5ea" secondAttribute="trailing" constant="16" id="cy6-8C-2Ji"/>
+                                    <constraint firstAttribute="trailing" secondItem="dLx-za-nQ8" secondAttribute="trailing" constant="16" id="kVP-UH-dKT"/>
+                                    <constraint firstItem="qCE-dk-5ea" firstAttribute="leading" secondItem="t6G-eO-Orz" secondAttribute="leading" constant="16" id="rdk-0Q-5AM"/>
+                                    <constraint firstItem="qCE-dk-5ea" firstAttribute="top" secondItem="dLx-za-nQ8" secondAttribute="bottom" constant="8" symbolic="YES" id="zr8-se-aHD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="llk-sw-MIZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="t6G-eO-Orz" firstAttribute="leading" secondItem="llk-sw-MIZ" secondAttribute="leading" constant="16" id="3kK-Uq-uwx"/>
+                            <constraint firstItem="llk-sw-MIZ" firstAttribute="trailing" secondItem="t6G-eO-Orz" secondAttribute="trailing" constant="16" id="Dgq-2c-1V3"/>
+                            <constraint firstItem="t6G-eO-Orz" firstAttribute="top" secondItem="llk-sw-MIZ" secondAttribute="top" constant="16" id="FEX-bk-Fsx"/>
+                            <constraint firstItem="dkl-5x-zsp" firstAttribute="top" secondItem="t6G-eO-Orz" secondAttribute="bottom" constant="16" id="JEn-qu-uOB"/>
+                            <constraint firstItem="dkl-5x-zsp" firstAttribute="leading" secondItem="llk-sw-MIZ" secondAttribute="leading" constant="54" id="PU6-Pz-zSv"/>
+                            <constraint firstItem="llk-sw-MIZ" firstAttribute="trailing" secondItem="dkl-5x-zsp" secondAttribute="trailing" constant="54" id="nFw-lr-Nem"/>
+                            <constraint firstItem="dkl-5x-zsp" firstAttribute="bottom" secondItem="llk-sw-MIZ" secondAttribute="bottom" constant="-8" id="vXY-b6-uEJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zxK-kk-nnn"/>
+                    <connections>
+                        <outlet property="centerView" destination="t6G-eO-Orz" id="pjk-jg-3XP"/>
+                        <outlet property="phoneTextField" destination="qCE-dk-5ea" id="5kk-AW-Cul"/>
+                        <outlet property="signInButton" destination="dkl-5x-zsp" id="6zl-DI-yE0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rpy-SH-XSC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-71.014492753623188" y="107.8125"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="dkl-5x-zsp">
+            <size key="intrinsicContentSize" width="44" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="Title Color">
+            <color red="0.15294117647058825" green="0.15686274509803921" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

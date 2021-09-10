@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cart Row" rowHeight="125" id="Uqg-ko-nHC" userLabel="Cart Row" customClass="CartRow" customModule="aimoon_main" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="126"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uqg-ko-nHC" id="RYN-jy-lA5">
+                <rect key="frame" x="0.0" y="0.0" width="374" height="126"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4c-Uv-apa" userLabel="Body View">
+                        <rect key="frame" x="8" y="4" width="358" height="118"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C7a-qm-a3n" userLabel="Product Image View" customClass="UploadableImageView" customModule="aimoon_main" customModuleProvider="target">
+                                <rect key="frame" x="8" y="8" width="100" height="102"/>
+                                <color key="backgroundColor" name="Placeholder"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="HYb-QW-LLQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="2000 ₽" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8F-NL-W5d" userLabel="Price Label">
+                                <rect key="frame" x="120" y="88.5" width="190" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Заголовок we89qfuq98ewuf9qw80efuqw09efuqw09e8fuqw09ef8uqwe09f8uqwe09f8uqw0e9f8uqwe098fuqwfqwefqwef" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWB-wo-RiZ" userLabel="Title Label">
+                                <rect key="frame" x="120" y="10" width="190" height="70.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2b-FV-jhA" userLabel="Remove Button" customClass="AMView" customModule="aimoon_main" customModuleProvider="target">
+                                <rect key="frame" x="322" y="12" width="24" height="24"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Remove" translatesAutoresizingMaskIntoConstraints="NO" id="q6c-bl-u6m" userLabel="Icon View" customClass="AMImageView" customModule="aimoon_main" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="q6c-bl-u6m" firstAttribute="leading" secondItem="s2b-FV-jhA" secondAttribute="leading" id="60R-Lz-0R3"/>
+                                    <constraint firstAttribute="bottom" secondItem="q6c-bl-u6m" secondAttribute="bottom" id="Izi-2B-R08"/>
+                                    <constraint firstItem="q6c-bl-u6m" firstAttribute="top" secondItem="s2b-FV-jhA" secondAttribute="top" id="K4u-KP-Bvl"/>
+                                    <constraint firstAttribute="trailing" secondItem="q6c-bl-u6m" secondAttribute="trailing" id="UbO-3t-Qlg"/>
+                                    <constraint firstAttribute="height" constant="24" id="ftP-o9-HKg"/>
+                                    <constraint firstAttribute="width" constant="24" id="s6N-EV-PSP"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="removeButtonDidPress:" destination="Uqg-ko-nHC" eventType="touchUpInside" id="zRf-CC-AW5"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="0.19708602729885058" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="c8F-NL-W5d" firstAttribute="top" relation="greaterThanOrEqual" secondItem="sWB-wo-RiZ" secondAttribute="bottom" constant="8" id="5x4-Ns-dDs"/>
+                            <constraint firstItem="s2b-FV-jhA" firstAttribute="leading" secondItem="sWB-wo-RiZ" secondAttribute="trailing" constant="12" id="BwH-Nm-1O6"/>
+                            <constraint firstItem="c8F-NL-W5d" firstAttribute="leading" secondItem="C7a-qm-a3n" secondAttribute="trailing" constant="12" id="H5z-rx-CYY"/>
+                            <constraint firstItem="C7a-qm-a3n" firstAttribute="top" secondItem="f4c-Uv-apa" secondAttribute="top" constant="8" id="K2j-Cu-yeK"/>
+                            <constraint firstItem="sWB-wo-RiZ" firstAttribute="leading" secondItem="C7a-qm-a3n" secondAttribute="trailing" constant="12" id="KUs-Nv-Dqm"/>
+                            <constraint firstItem="sWB-wo-RiZ" firstAttribute="top" secondItem="C7a-qm-a3n" secondAttribute="top" constant="2" id="PJ0-Lw-h7K"/>
+                            <constraint firstItem="c8F-NL-W5d" firstAttribute="trailing" secondItem="sWB-wo-RiZ" secondAttribute="trailing" id="Vmh-nC-Z1z"/>
+                            <constraint firstItem="s2b-FV-jhA" firstAttribute="top" secondItem="f4c-Uv-apa" secondAttribute="top" constant="12" id="aJz-Ms-8hr"/>
+                            <constraint firstItem="C7a-qm-a3n" firstAttribute="leading" secondItem="f4c-Uv-apa" secondAttribute="leading" constant="8" id="m3S-m4-Jot"/>
+                            <constraint firstAttribute="bottom" secondItem="C7a-qm-a3n" secondAttribute="bottom" constant="8" id="mzv-tI-ec6"/>
+                            <constraint firstItem="s2b-FV-jhA" firstAttribute="trailing" secondItem="f4c-Uv-apa" secondAttribute="trailing" constant="-12" id="q4U-oE-61g"/>
+                            <constraint firstItem="c8F-NL-W5d" firstAttribute="bottom" secondItem="C7a-qm-a3n" secondAttribute="bottom" constant="-2" id="v37-Gr-B9d"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="f4c-Uv-apa" firstAttribute="bottom" secondItem="RYN-jy-lA5" secondAttribute="bottom" constant="-4" id="Qbd-kM-wMe"/>
+                    <constraint firstItem="f4c-Uv-apa" firstAttribute="leading" secondItem="RYN-jy-lA5" secondAttribute="leading" constant="8" id="XqY-U4-Sti"/>
+                    <constraint firstItem="f4c-Uv-apa" firstAttribute="trailing" secondItem="RYN-jy-lA5" secondAttribute="trailing" constant="-8" id="dQi-Ds-89a"/>
+                    <constraint firstItem="f4c-Uv-apa" firstAttribute="top" secondItem="RYN-jy-lA5" secondAttribute="top" constant="4" id="qxW-aq-IFZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bodyView" destination="f4c-Uv-apa" id="jnw-v3-a7y"/>
+                <outlet property="priceLabel" destination="c8F-NL-W5d" id="EXF-AK-okX"/>
+                <outlet property="productImageView" destination="C7a-qm-a3n" id="a0k-XN-odn"/>
+                <outlet property="removeButton" destination="s2b-FV-jhA" id="DK1-Oh-3Hp"/>
+                <outlet property="removeButtonIcon" destination="q6c-bl-u6m" id="K07-uE-Ci1"/>
+                <outlet property="titleLabel" destination="sWB-wo-RiZ" id="wNh-Ip-QJr"/>
+            </connections>
+            <point key="canvasLocation" x="88.405797101449281" y="119.86607142857142"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="q6c-bl-u6m">
+            <size key="intrinsicContentSize" width="24" height="24"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="Remove" width="24" height="24"/>
+        <namedColor name="Placeholder">
+            <color red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

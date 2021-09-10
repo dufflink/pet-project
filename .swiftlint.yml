@@ -1,0 +1,60 @@
+disabled_rules:
+  - block_based_kvo
+  - cyclomatic_complexity
+  - file_length
+  - force_try
+  - function_body_length
+  - function_parameter_count
+  - identifier_name
+  - large_tuple
+  - line_length
+  - nesting
+  - no_space_in_method_call
+  - trailing_whitespace
+  - type_body_length
+  - unused_optional_binding
+  - weak_delegate
+
+opt_in_rules:
+  - array_init
+  - closure_end_indentation
+  - closure_spacing
+  - collection_alignment
+  - conditional_returns_on_newline
+  - contains_over_filter_count
+  - contains_over_filter_is_empty
+  - contains_over_first_not_nil
+  - contains_over_range_nil_comparison
+  - empty_collection_literal
+  - empty_count
+  - explicit_init
+  - first_where
+  - flatmap_over_map_reduce
+  - last_where
+  - legacy_multiple
+  - legacy_random
+  - let_var_whitespace
+  - multiline_literal_brackets
+  - object_literal
+  - operator_usage_whitespace
+  - overridden_super_call
+  - raw_value_for_camel_cased_codable_enum
+  - redundant_nil_coalescing
+  - redundant_type_annotation
+  - sorted_first_last
+  - sorted_imports
+  - switch_case_on_newline
+  - toggle_bool
+  - unneeded_parentheses_in_closure_argument
+  - unowned_variable_capture
+  - unused_declaration
+  - unused_import
+  - yoda_condition
+
+excluded:
+  - vendor/bundle
+  - aimoon-main/Resources/R.generated.swift
+  - Pods
+
+switch_case_alignment:
+  indented_cases: true

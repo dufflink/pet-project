@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="99B-an-XZ6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="oN8-H3-flH">
+            <objects>
+                <navigationController storyboardIdentifier="CategoriesNavigationController" id="99B-an-XZ6" customClass="AMNavigationController" customModule="aimoon_main" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ymn-Pb-ABj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4pg-c8-kAc" kind="relationship" relationship="rootViewController" id="dpK-7X-YpR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jaL-Hb-tFH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-842" y="108"/>
+        </scene>
+        <!--Categories View Controller-->
+        <scene sceneID="G2K-r1-jxF">
+            <objects>
+                <viewController storyboardIdentifier="CategoriesViewController" id="4pg-c8-kAc" customClass="CategoriesViewController" customModule="aimoon_main" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ooT-4m-4Yu" userLabel="Root View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="avU-Tu-aex">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="Mf1-jC-NvF" userLabel="Header View">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJy-0S-5iR" userLabel="All Products Button" customClass="AMButton" customModule="aimoon_main" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="4" width="398" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="aBy-F8-BDy"/>
+                                            </constraints>
+                                            <state key="normal" title="Все товары категории &quot;Серьги&quot;"/>
+                                            <connections>
+                                                <action selector="allProductsButtonDidPress:" destination="4pg-c8-kAc" eventType="touchUpInside" id="KpI-JO-1jH"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="fJy-0S-5iR" firstAttribute="top" secondItem="Mf1-jC-NvF" secondAttribute="top" constant="4" id="30L-Nq-h0H"/>
+                                        <constraint firstItem="fJy-0S-5iR" firstAttribute="bottom" secondItem="Mf1-jC-NvF" secondAttribute="bottom" constant="-4" id="AnU-HG-JBY"/>
+                                        <constraint firstItem="fJy-0S-5iR" firstAttribute="leading" secondItem="Mf1-jC-NvF" secondAttribute="leading" constant="8" id="KuD-wc-9dW"/>
+                                        <constraint firstItem="fJy-0S-5iR" firstAttribute="trailing" secondItem="Mf1-jC-NvF" secondAttribute="trailing" constant="-8" id="oCA-IZ-SP7"/>
+                                    </constraints>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="4pg-c8-kAc" id="UTm-wy-KWy"/>
+                                    <outlet property="delegate" destination="4pg-c8-kAc" id="OUj-Sf-xHl"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9Md-J9-Bn4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="avU-Tu-aex" firstAttribute="bottom" secondItem="9Md-J9-Bn4" secondAttribute="bottom" id="5sq-VX-Wvw"/>
+                            <constraint firstItem="avU-Tu-aex" firstAttribute="top" secondItem="9Md-J9-Bn4" secondAttribute="top" id="ILb-yc-Q1T"/>
+                            <constraint firstItem="avU-Tu-aex" firstAttribute="leading" secondItem="9Md-J9-Bn4" secondAttribute="leading" id="bXH-OE-FLy"/>
+                            <constraint firstItem="avU-Tu-aex" firstAttribute="trailing" secondItem="9Md-J9-Bn4" secondAttribute="trailing" id="zht-Yj-Nci"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZoD-Mc-QCT"/>
+                    <connections>
+                        <outlet property="allProductsButton" destination="fJy-0S-5iR" id="2fV-zD-dIH"/>
+                        <outlet property="allProductsButtonHeight" destination="aBy-F8-BDy" id="yeS-vE-ZQG"/>
+                        <outlet property="tableView" destination="avU-Tu-aex" id="0cR-tF-iub"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UgB-it-kHi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-71.014492753623188" y="107.8125"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="fJy-0S-5iR">
+            <size key="intrinsicContentSize" width="229" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

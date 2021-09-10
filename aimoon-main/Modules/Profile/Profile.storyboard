@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wPB-2f-Y1y">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="wZz-sj-FgU">
+            <objects>
+                <navigationController storyboardIdentifier="ProfileNavigationController" id="wPB-2f-Y1y" customClass="AMNavigationController" customModule="aimoon_main" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d5h-nP-fJg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6Xb-LX-1mj" kind="relationship" relationship="rootViewController" id="b5k-kY-Ds1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kFS-LV-RMH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-857" y="108"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="rRf-cY-cjV">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="6Xb-LX-1mj" customClass="ProfileViewController" customModule="aimoon_main" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tXw-Rc-tyN" userLabel="Root View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile Header" translatesAutoresizingMaskIntoConstraints="NO" id="ug1-Oj-3Xz" userLabel="Image View">
+                                <rect key="frame" x="143" y="108" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="iZD-c4-6Jm"/>
+                                    <constraint firstAttribute="width" constant="128" id="sLu-DQ-a8c"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9fK-Tg-1eG">
+                                <rect key="frame" x="0.0" y="252" width="414" height="521"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="6Xb-LX-1mj" id="cSO-eb-94t"/>
+                                    <outlet property="delegate" destination="6Xb-LX-1mj" id="iow-3q-hkq"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Синхронизация данных..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DH-dl-XWF" userLabel="Syncing Label">
+                                <rect key="frame" x="20" y="781" width="374" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdJ-BK-3Ng" userLabel="Log Out Button" customClass="AMButton" customModule="aimoon_main" customModuleProvider="target">
+                                <rect key="frame" x="20" y="806" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="aZ3-K9-Bix"/>
+                                </constraints>
+                                <state key="normal" title="Выйти"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRegular" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logoutButtonDidPress:" destination="6Xb-LX-1mj" eventType="touchUpInside" id="aPt-lL-S45"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YC0-u2-5jK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9fK-Tg-1eG" firstAttribute="trailing" secondItem="YC0-u2-5jK" secondAttribute="trailing" id="1tc-0d-cEn"/>
+                            <constraint firstItem="9fK-Tg-1eG" firstAttribute="leading" secondItem="YC0-u2-5jK" secondAttribute="leading" id="3Qf-cU-5xB"/>
+                            <constraint firstItem="zdJ-BK-3Ng" firstAttribute="leading" secondItem="YC0-u2-5jK" secondAttribute="leading" constant="20" id="COy-Z6-QOs"/>
+                            <constraint firstItem="9fK-Tg-1eG" firstAttribute="top" secondItem="ug1-Oj-3Xz" secondAttribute="bottom" constant="16" id="IA9-ee-EZh"/>
+                            <constraint firstItem="zdJ-BK-3Ng" firstAttribute="trailing" secondItem="YC0-u2-5jK" secondAttribute="trailing" constant="-20" id="KjG-T2-4lX"/>
+                            <constraint firstItem="6DH-dl-XWF" firstAttribute="trailing" secondItem="YC0-u2-5jK" secondAttribute="trailing" constant="-20" id="Ssa-Cb-bZB"/>
+                            <constraint firstItem="zdJ-BK-3Ng" firstAttribute="top" secondItem="6DH-dl-XWF" secondAttribute="bottom" constant="8" id="ffR-de-lmo"/>
+                            <constraint firstItem="ug1-Oj-3Xz" firstAttribute="top" secondItem="YC0-u2-5jK" secondAttribute="top" constant="20" id="i1D-kR-My5"/>
+                            <constraint firstItem="6DH-dl-XWF" firstAttribute="top" secondItem="9fK-Tg-1eG" secondAttribute="bottom" constant="8" id="tpG-xk-9rq"/>
+                            <constraint firstItem="ug1-Oj-3Xz" firstAttribute="centerX" secondItem="tXw-Rc-tyN" secondAttribute="centerX" id="xOK-R0-KOu"/>
+                            <constraint firstItem="6DH-dl-XWF" firstAttribute="leading" secondItem="YC0-u2-5jK" secondAttribute="leading" constant="20" id="yhJ-c3-uzw"/>
+                            <constraint firstItem="zdJ-BK-3Ng" firstAttribute="bottom" secondItem="YC0-u2-5jK" secondAttribute="bottom" constant="-16" id="zK9-Be-QMx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8y2-pr-qs0"/>
+                    <connections>
+                        <outlet property="syncingLabel" destination="6DH-dl-XWF" id="l75-za-DZe"/>
+                        <outlet property="tableView" destination="9fK-Tg-1eG" id="3Ni-ev-7dh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="itm-KE-gl6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-71.014492753623188" y="107.8125"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="zdJ-BK-3Ng">
+            <size key="intrinsicContentSize" width="50" height="28"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="Profile Header" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

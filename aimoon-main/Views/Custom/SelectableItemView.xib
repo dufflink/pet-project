@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectableItemView" customModule="aimoon_main" customModuleProvider="target">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="image" keyPath="defaultImage" value="Heart Without Color"/>
+                <userDefinedRuntimeAttribute type="image" keyPath="highlightedImage" value="Heart Full Fill"/>
+                <userDefinedRuntimeAttribute type="color" keyPath="tintColorView">
+                    <color key="value" systemColor="systemRedColor"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="imageView" destination="1bG-59-5a9" id="1tp-06-UKg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="MLn-WH-0By" userLabel="Selectable Item View" customClass="AMView" customModule="aimoon_main" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart Without Color" translatesAutoresizingMaskIntoConstraints="NO" id="1bG-59-5a9" userLabel="Image View" customClass="AMImageView" customModule="aimoon_main" customModuleProvider="target">
+                    <rect key="frame" x="4" y="4" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="L16-ou-3X7"/>
+                        <constraint firstAttribute="height" constant="24" id="v4I-AW-pku"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Mpy-7O-9Qu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="1bG-59-5a9" firstAttribute="centerX" secondItem="MLn-WH-0By" secondAttribute="centerX" id="ALC-ie-2r1"/>
+                <constraint firstItem="1bG-59-5a9" firstAttribute="centerY" secondItem="MLn-WH-0By" secondAttribute="centerY" id="wav-Ap-zJq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <action selector="bodyViewDidPress:" destination="-1" eventType="touchUpInside" id="Jic-Vv-i6E"/>
+            </connections>
+            <point key="canvasLocation" x="-206.40000000000001" y="391.304347826087"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="1bG-59-5a9">
+            <size key="intrinsicContentSize" width="24" height="24"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="Heart Full Fill" width="24" height="24"/>
+        <image name="Heart Without Color" width="24" height="24"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageViewer" customModule="aimoon_main" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="NOk-6R-Yr3" id="tjC-Pc-2Oy"/>
+                <outlet property="counterLabel" destination="DAs-e8-7ts" id="Zcq-uc-Mca"/>
+                <outlet property="priceView" destination="6yI-qS-I8g" id="F9K-Xc-oFz"/>
+                <outlet property="titleView" destination="TA1-qa-QCI" id="sqd-VJ-4F6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="Image Viewer">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NOk-6R-Yr3" customClass="ImageViewerCollectionView" customModule="aimoon_main" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" name="Title Color"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="VWX-Sl-uiw">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yI-qS-I8g" userLabel="Price View">
+                    <rect key="frame" x="20" y="846" width="374" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 из 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAs-e8-7ts" userLabel="Counter Label" customClass="CounterLabel" customModule="aimoon_main" customModuleProvider="target">
+                    <rect key="frame" x="184" y="60" width="46" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TA1-qa-QCI" userLabel="Title View">
+                    <rect key="frame" x="20" y="854" width="374" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="Title Color"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="NOk-6R-Yr3" secondAttribute="bottom" id="19u-ge-nhW"/>
+                <constraint firstItem="6yI-qS-I8g" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="2FT-QH-uZD"/>
+                <constraint firstItem="NOk-6R-Yr3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2Ux-d1-Ab7"/>
+                <constraint firstItem="TA1-qa-QCI" firstAttribute="top" secondItem="6yI-qS-I8g" secondAttribute="bottom" constant="8" id="9Em-g3-Nkm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TA1-qa-QCI" secondAttribute="trailing" constant="20" id="OB6-82-R2O"/>
+                <constraint firstItem="DAs-e8-7ts" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="UDh-of-auw"/>
+                <constraint firstItem="NOk-6R-Yr3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="XQ2-qx-6hn"/>
+                <constraint firstItem="TA1-qa-QCI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="cmu-G3-38U"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6yI-qS-I8g" secondAttribute="trailing" constant="20" id="dYs-ce-CFr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="TA1-qa-QCI" secondAttribute="bottom" constant="8" id="iFu-nG-2D9"/>
+                <constraint firstItem="NOk-6R-Yr3" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="stq-7N-cEQ"/>
+                <constraint firstItem="DAs-e8-7ts" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="vde-hK-JVY"/>
+            </constraints>
+            <point key="canvasLocation" x="-146.37681159420291" y="103.79464285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Title Color">
+            <color red="0.15294117647058825" green="0.15686274509803921" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

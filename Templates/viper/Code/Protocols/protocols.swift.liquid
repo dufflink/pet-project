@@ -1,0 +1,38 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+
+protocol {{ module_info.name }}RouterProtocol: BaseRouter {
+
+    static func createModule() -> AMViewController
+    
+}
+
+protocol {{ module_info.name }}ViewProtocol: BaseView {
+
+    var presenter: {{ module_info.name }}PresenterProtocol? { get set }
+
+}
+
+protocol {{ module_info.name }}PresenterProtocol: AnyObject {
+
+    var view: {{ module_info.name }}ViewProtocol? { get set }
+
+    var interactor: {{ module_info.name }}InteractorInputProtocol? { get set }
+
+    var router: {{ module_info.name }}RouterProtocol? { get set }
+
+    init(router: {{ module_info.name }}RouterProtocol, view: {{ module_info.name }}ViewProtocol, interactor: {{ module_info.name }}InteractorInputProtocol)
+
+    func viewDidLoad()
+
+}
+
+protocol {{ module_info.name }}InteractorInputProtocol: AnyObject {
+
+    var presenter: {{ module_info.name }}InteractorOutputProtocol? { get set }
+
+}
+
+protocol {{ module_info.name }}InteractorOutputProtocol: AnyObject { }

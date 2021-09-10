@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SmsCodeNumberView" customModule="aimoon_main" customModuleProvider="target">
+            <connections>
+                <outlet property="textField" destination="bEJ-jw-Aby" id="OU9-fX-xjq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="5fZ-7X-Kjj" userLabel="Sms Code Number View">
+            <rect key="frame" x="0.0" y="0.0" width="24" height="32"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I26-yC-xbX" userLabel="Body View" customClass="AMView" customModule="aimoon_main" customModuleProvider="target">
+                    <rect key="frame" x="2" y="2" width="20" height="28"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bEJ-jw-Aby" userLabel="Text Field" customClass="AMTextField" customModule="aimoon_main" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="20" height="28"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" name="Placeholder"/>
+                    <constraints>
+                        <constraint firstItem="bEJ-jw-Aby" firstAttribute="top" secondItem="I26-yC-xbX" secondAttribute="top" id="1cH-f4-AjN"/>
+                        <constraint firstAttribute="bottom" secondItem="bEJ-jw-Aby" secondAttribute="bottom" id="T31-Ne-FMP"/>
+                        <constraint firstItem="bEJ-jw-Aby" firstAttribute="leading" secondItem="I26-yC-xbX" secondAttribute="leading" id="Yl4-B6-FwX"/>
+                        <constraint firstAttribute="trailing" secondItem="bEJ-jw-Aby" secondAttribute="trailing" id="ZBs-nO-9kG"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornersRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="RQQ-8k-W1g"/>
+            <constraints>
+                <constraint firstItem="I26-yC-xbX" firstAttribute="top" secondItem="RQQ-8k-W1g" secondAttribute="top" constant="2" id="ZyB-GE-5Tx"/>
+                <constraint firstItem="I26-yC-xbX" firstAttribute="trailing" secondItem="RQQ-8k-W1g" secondAttribute="trailing" constant="-2" id="bk8-1Y-7fD"/>
+                <constraint firstItem="I26-yC-xbX" firstAttribute="leading" secondItem="RQQ-8k-W1g" secondAttribute="leading" constant="2" id="dgu-bm-xpT"/>
+                <constraint firstItem="I26-yC-xbX" firstAttribute="bottom" secondItem="RQQ-8k-W1g" secondAttribute="bottom" priority="999" constant="-2" id="ejV-Qq-KjA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="252.89855072463769" y="-14.673913043478262"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Placeholder">
+            <color red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

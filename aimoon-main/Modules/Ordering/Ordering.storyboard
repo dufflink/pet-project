@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ordering View Controller-->
+        <scene sceneID="40P-LE-Oxm">
+            <objects>
+                <viewController storyboardIdentifier="OrderingViewController" hidesBottomBarWhenPushed="YES" id="gqO-y5-bvR" customClass="OrderingViewController" customModule="aimoon_main" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dH4-YS-0Ay" userLabel="Root View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5DQ-el-KLo">
+                                <rect key="frame" x="6" y="52" width="402" height="80"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpW-T3-ggF" customClass="InputFieldView" customModule="aimoon_main" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="402" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="D6P-uF-thk"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btp-G7-G1k" userLabel="Accept Order Button" customClass="AMButton" customModule="aimoon_main" customModuleProvider="target">
+                                <rect key="frame" x="12" y="144" width="390" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Tnq-mW-2Ky"/>
+                                </constraints>
+                                <state key="normal" title="Подтвердить заказ"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRegular" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="acceptOrderButtonDidPress:" destination="gqO-y5-bvR" eventType="touchUpInside" id="Al0-nu-jae"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="sh0-Ve-Sxy" userLabel="Activity Indicator">
+                                <rect key="frame" x="197" y="196" width="20" height="20"/>
+                                <color key="color" name="Main color"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ebg-gO-Vgd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="btp-G7-G1k" firstAttribute="top" secondItem="5DQ-el-KLo" secondAttribute="bottom" constant="12" id="6Bz-We-oJA"/>
+                            <constraint firstItem="btp-G7-G1k" firstAttribute="leading" secondItem="ebg-gO-Vgd" secondAttribute="leading" constant="12" id="Der-pQ-IOt"/>
+                            <constraint firstItem="5DQ-el-KLo" firstAttribute="trailing" secondItem="ebg-gO-Vgd" secondAttribute="trailing" constant="-6" id="ftu-9X-3JA"/>
+                            <constraint firstItem="sh0-Ve-Sxy" firstAttribute="centerX" secondItem="dH4-YS-0Ay" secondAttribute="centerX" id="iGw-0X-HCr"/>
+                            <constraint firstItem="5DQ-el-KLo" firstAttribute="top" secondItem="ebg-gO-Vgd" secondAttribute="top" constant="8" id="mhx-q6-MGI"/>
+                            <constraint firstItem="btp-G7-G1k" firstAttribute="trailing" secondItem="ebg-gO-Vgd" secondAttribute="trailing" constant="-12" id="qnb-VY-j1F"/>
+                            <constraint firstItem="5DQ-el-KLo" firstAttribute="leading" secondItem="ebg-gO-Vgd" secondAttribute="leading" constant="6" id="u0H-t2-7zq"/>
+                            <constraint firstItem="sh0-Ve-Sxy" firstAttribute="top" secondItem="btp-G7-G1k" secondAttribute="bottom" constant="8" symbolic="YES" id="vxK-Da-DmN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="acceptOrderButton" destination="btp-G7-G1k" id="2uZ-DB-uFZ"/>
+                        <outlet property="activityIndicator" destination="sh0-Ve-Sxy" id="72J-Jw-5xo"/>
+                        <outlet property="stackView" destination="5DQ-el-KLo" id="ueh-S8-YCn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w9p-O9-Ifr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-255.07246376811597" y="124.55357142857142"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="btp-G7-G1k">
+            <size key="intrinsicContentSize" width="148" height="28"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="Main color">
+            <color red="1" green="0.30980392156862746" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

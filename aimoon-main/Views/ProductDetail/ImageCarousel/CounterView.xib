@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CounterView" customModule="aimoon_main" customModuleProvider="target">
+            <connections>
+                <outlet property="labelView" destination="9Tj-aW-66R" id="j0I-ae-Vg6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Bcn-xt-yef" userLabel="Counter View">
+            <rect key="frame" x="0.0" y="0.0" width="59" height="29"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Tj-aW-66R" userLabel="Label View" customClass="CounterLabel" customModule="aimoon_main" customModuleProvider="target">
+                    <rect key="frame" x="4" y="4" width="51" height="21"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" name="Title Color"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="y2p-cz-9dI"/>
+            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="y2p-cz-9dI" firstAttribute="trailing" secondItem="9Tj-aW-66R" secondAttribute="trailing" constant="4" id="Dut-UF-ubd"/>
+                <constraint firstItem="9Tj-aW-66R" firstAttribute="leading" secondItem="y2p-cz-9dI" secondAttribute="leading" constant="4" id="kEe-i3-CJr"/>
+                <constraint firstItem="9Tj-aW-66R" firstAttribute="top" secondItem="Bcn-xt-yef" secondAttribute="top" constant="4" id="pdE-Ie-viO"/>
+                <constraint firstItem="y2p-cz-9dI" firstAttribute="bottom" secondItem="9Tj-aW-66R" secondAttribute="bottom" constant="4" id="t0h-I4-tUM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-126.81159420289856" y="192.52232142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Title Color">
+            <color red="0.15294117647058825" green="0.15686274509803921" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

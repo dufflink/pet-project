@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingRowView" customModule="aimoon_main" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="fhr-lL-wQ4" userLabel="Loading Row View">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kL2-gT-eLA" userLabel="Root View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="8m2-vd-U1A">
+                            <rect key="frame" x="197" y="16.5" width="20" height="20"/>
+                            <color key="color" name="Main color"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="8m2-vd-U1A" firstAttribute="centerY" secondItem="kL2-gT-eLA" secondAttribute="centerY" id="Ohb-OE-6fT"/>
+                        <constraint firstItem="8m2-vd-U1A" firstAttribute="centerX" secondItem="kL2-gT-eLA" secondAttribute="centerX" id="yUk-vq-QRx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="OKv-R8-W6z"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="kL2-gT-eLA" firstAttribute="top" secondItem="fhr-lL-wQ4" secondAttribute="top" id="SKb-Og-wXb"/>
+                <constraint firstItem="kL2-gT-eLA" firstAttribute="leading" secondItem="OKv-R8-W6z" secondAttribute="leading" id="TpC-JU-NG7"/>
+                <constraint firstAttribute="bottom" secondItem="kL2-gT-eLA" secondAttribute="bottom" id="X9D-yQ-bu9"/>
+                <constraint firstItem="kL2-gT-eLA" firstAttribute="trailing" secondItem="OKv-R8-W6z" secondAttribute="trailing" id="i6H-h9-TWW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-188.40579710144928" y="-13.058035714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Main color">
+            <color red="1" green="0.30980392156862746" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

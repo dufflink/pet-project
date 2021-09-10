@@ -1,0 +1,25 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+
+import UIKit
+
+final class {{ module_info.name }}Router: {{ module_info.name }}RouterProtocol {
+
+    class func createModule() -> AMViewController {
+	//TODO: Заменить "{{ module_info.name }}ViewController()" на "R.storyboard.[name-storyboard].{{ module_info.name }}ViewController"
+        let view = {{ module_info.name }}ViewController()
+
+        let interactor = {{ module_info.name }}Interactor()
+        let router = {{ module_info.name }}Router()
+
+        let presenter = {{ module_info.name }}Presenter(router: router, view: view, interactor: interactor)
+
+        view.presenter = presenter
+        interactor.presenter = presenter
+
+        return view
+    }
+
+}

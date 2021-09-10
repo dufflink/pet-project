@@ -1,0 +1,28 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+
+final class {{ module_info.name }}Presenter: {{ module_info.name }}PresenterProtocol {
+
+    weak var view: {{ module_info.name }}ViewProtocol?
+
+    var interactor: {{ module_info.name }}InteractorInputProtocol?
+    var router: {{ module_info.name }}RouterProtocol?
+
+    // MARK: - Life Cycle
+
+    init(router: {{ module_info.name }}RouterProtocol, view: {{ module_info.name }}ViewProtocol, interactor: {{ module_info.name }}InteractorInputProtocol) {
+        self.router = router
+        self.view = view
+
+        self.interactor = interactor
+    }
+
+    func viewDidLoad() { }
+
+}
+
+// MARK: - {{ module_info.name }} Interactor Output Protocol
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}InteractorOutputProtocol { }

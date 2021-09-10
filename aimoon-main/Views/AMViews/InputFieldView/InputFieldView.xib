@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputFieldView" customModule="aimoon_main" customModuleProvider="target">
+            <connections>
+                <outlet property="textField" destination="TEQ-0u-zo2" id="zTf-kk-lxh"/>
+                <outlet property="textFieldLeading" destination="DeE-on-Dbg" id="fnr-2j-j5q"/>
+                <outlet property="titleView" destination="tzl-S8-m42" id="ZcE-lu-ka7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="bML-Tg-xjV" userLabel="Input Field View">
+            <rect key="frame" x="0.0" y="0.0" width="419" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Наименование" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzl-S8-m42" userLabel="Title Label">
+                    <rect key="frame" x="8" y="4" width="403" height="13"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" name="Main color"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TEQ-0u-zo2" userLabel="Text Field" customClass="AMTextField" customModule="aimoon_main" customModuleProvider="target">
+                    <rect key="frame" x="8" y="21" width="403" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="iUj-h2-ICH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vqh-lN-SLd"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="TEQ-0u-zo2" firstAttribute="leading" secondItem="vqh-lN-SLd" secondAttribute="leading" constant="8" id="DeE-on-Dbg"/>
+                <constraint firstItem="TEQ-0u-zo2" firstAttribute="top" secondItem="tzl-S8-m42" secondAttribute="bottom" constant="4" id="Vvf-9G-Mbg"/>
+                <constraint firstItem="vqh-lN-SLd" firstAttribute="bottom" secondItem="TEQ-0u-zo2" secondAttribute="bottom" constant="4" id="Xol-dl-Jhm"/>
+                <constraint firstItem="tzl-S8-m42" firstAttribute="leading" secondItem="vqh-lN-SLd" secondAttribute="leading" constant="8" id="fVp-Cy-yV5"/>
+                <constraint firstItem="vqh-lN-SLd" firstAttribute="trailing" secondItem="tzl-S8-m42" secondAttribute="trailing" constant="8" id="gVV-dT-Hxv"/>
+                <constraint firstItem="tzl-S8-m42" firstAttribute="top" secondItem="vqh-lN-SLd" secondAttribute="top" constant="4" id="hV8-Ja-PNm"/>
+                <constraint firstItem="vqh-lN-SLd" firstAttribute="trailing" secondItem="TEQ-0u-zo2" secondAttribute="trailing" constant="8" id="zqN-9T-kcb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="165.94202898550725" y="376.22282608695656"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Main color">
+            <color red="1" green="0.30980392156862746" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

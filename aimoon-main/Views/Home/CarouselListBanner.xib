@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarouselListBanner" customModule="aimoon_main" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="PvW-zd-DA1" id="qLZ-Lr-GcO"/>
+                <outlet property="collectionViewHeight" destination="g2m-j0-U6a" id="5E3-Jn-jiE"/>
+                <outlet property="headerView" destination="yBF-UM-Tu0" id="Fgm-Kv-cVk"/>
+                <outlet property="titleView" destination="6Iy-Pe-Wbm" id="RBF-rG-Jv4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="6Th-aD-LcR" userLabel="Carousel List Banner">
+            <rect key="frame" x="0.0" y="0.0" width="411" height="195"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hVu-xP-ugH">
+                    <rect key="frame" x="0.0" y="0.0" width="411" height="195"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yBF-UM-Tu0" userLabel="Header View">
+                            <rect key="frame" x="0.0" y="0.0" width="411" height="81.666666666666671"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Iy-Pe-Wbm" userLabel="Title View" customClass="HomeItemTitleView" customModule="aimoon_main" customModuleProvider="target">
+                                    <rect key="frame" x="8" y="8" width="395" height="73.666666666666671"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="6Iy-Pe-Wbm" firstAttribute="top" secondItem="yBF-UM-Tu0" secondAttribute="top" constant="8" id="8Zy-2J-rxa"/>
+                                <constraint firstItem="6Iy-Pe-Wbm" firstAttribute="leading" secondItem="yBF-UM-Tu0" secondAttribute="leading" constant="8" id="biH-do-4cf"/>
+                                <constraint firstItem="6Iy-Pe-Wbm" firstAttribute="trailing" secondItem="yBF-UM-Tu0" secondAttribute="trailing" constant="-8" id="lPh-El-BEo"/>
+                                <constraint firstItem="6Iy-Pe-Wbm" firstAttribute="bottom" secondItem="yBF-UM-Tu0" secondAttribute="bottom" id="yCY-cA-1yR"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fki-ja-2Az" userLabel="Body View">
+                            <rect key="frame" x="0.0" y="81.666666666666686" width="411" height="113.33333333333331"/>
+                            <subviews>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PvW-zd-DA1" customClass="ProductsCollectionView" customModule="aimoon_main" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="2" width="411" height="111.33333333333333"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" id="g2m-j0-U6a"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dBK-Uh-gKj">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="PvW-zd-DA1" firstAttribute="leading" secondItem="fki-ja-2Az" secondAttribute="leading" id="Rf2-nz-qLm"/>
+                                <constraint firstItem="PvW-zd-DA1" firstAttribute="top" secondItem="fki-ja-2Az" secondAttribute="top" constant="2" id="XoF-F4-6gC"/>
+                                <constraint firstItem="PvW-zd-DA1" firstAttribute="trailing" secondItem="fki-ja-2Az" secondAttribute="trailing" id="a6j-7m-RSg"/>
+                                <constraint firstItem="PvW-zd-DA1" firstAttribute="bottom" secondItem="fki-ja-2Az" secondAttribute="bottom" id="cIz-8A-gIo"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="hVu-xP-ugH" firstAttribute="top" secondItem="6Th-aD-LcR" secondAttribute="top" id="RNb-Vg-BNX"/>
+                <constraint firstItem="hVu-xP-ugH" firstAttribute="leading" secondItem="6Th-aD-LcR" secondAttribute="leading" id="ipc-i6-D2a"/>
+                <constraint firstItem="hVu-xP-ugH" firstAttribute="bottom" secondItem="6Th-aD-LcR" secondAttribute="bottom" id="lZV-nL-yYG"/>
+                <constraint firstItem="hVu-xP-ugH" firstAttribute="trailing" secondItem="6Th-aD-LcR" secondAttribute="trailing" id="yQF-9i-Cdg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="HYz-oX-bh3"/>
+            <point key="canvasLocation" x="-54.347826086956523" y="163.05803571428569"/>
+        </view>
+    </objects>
+</document>

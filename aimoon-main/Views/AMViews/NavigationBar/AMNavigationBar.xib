@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AMNavigationBar" customModule="aimoon_main" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="Z8c-tu-LaM" id="9xQ-KB-jyU"/>
+                <outlet property="rightBarButtons" destination="gLD-WY-3Vw" id="wU7-8B-ToS"/>
+                <outlet property="separateView" destination="aP0-t0-vt3" id="Jya-Rb-S6J"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="drL-Lz-PgC" userLabel="AMNavigation Bar">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="124"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8c-tu-LaM" userLabel="Back Button" customClass="AMNavBarButton" customModule="aimoon_main" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="80" width="44" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="rld-hi-uis"/>
+                        <constraint firstAttribute="width" constant="44" id="yje-Wk-4qi"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="Back"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLD-WY-3Vw" userLabel="Right Bar Buttons">
+                    <rect key="frame" x="298" y="80" width="44" height="44"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dDn-ne-wQl" userLabel="Bar Button" customClass="AMNavBarButton" customModule="aimoon_main" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="Dx1-RT-fhz"/>
+                                <constraint firstAttribute="height" constant="44" id="oHN-Nt-K1c"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="Profile"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aP0-t0-vt3" userLabel="Separate View" customClass="AMSeparateView" customModule="aimoon_main" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="123.5" width="342" height="0.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="a5k-ps-O2e"/>
+            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="aP0-t0-vt3" secondAttribute="trailing" id="03x-2z-eCr"/>
+                <constraint firstItem="Z8c-tu-LaM" firstAttribute="leading" secondItem="a5k-ps-O2e" secondAttribute="leading" id="A25-hO-obo"/>
+                <constraint firstItem="aP0-t0-vt3" firstAttribute="leading" secondItem="drL-Lz-PgC" secondAttribute="leading" id="NL0-R1-28k"/>
+                <constraint firstItem="gLD-WY-3Vw" firstAttribute="trailing" secondItem="a5k-ps-O2e" secondAttribute="trailing" id="eJB-83-X1I"/>
+                <constraint firstItem="aP0-t0-vt3" firstAttribute="bottom" secondItem="a5k-ps-O2e" secondAttribute="bottom" id="fTV-je-J4a"/>
+                <constraint firstItem="gLD-WY-3Vw" firstAttribute="bottom" secondItem="a5k-ps-O2e" secondAttribute="bottom" id="gh6-qb-3ET"/>
+                <constraint firstItem="Z8c-tu-LaM" firstAttribute="bottom" secondItem="a5k-ps-O2e" secondAttribute="bottom" id="ldO-5t-nLd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-70.400000000000006" y="83.658170914542737"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Back" width="24" height="24"/>
+        <image name="Profile" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
